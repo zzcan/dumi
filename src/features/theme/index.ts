@@ -80,6 +80,10 @@ export default (api: IApi) => {
           specifier: '{ DumiDemo }',
           source: 'dumi/theme',
         },
+        SourceCode: {
+          specifier: '{ SourceCode }',
+          source: 'dumi/theme',
+        },
       });
 
       return memo;

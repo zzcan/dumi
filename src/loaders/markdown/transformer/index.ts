@@ -3,6 +3,7 @@ import rehypeDemo from './rehypeDemo';
 import rehypeIsolation from './rehypeIsolation';
 import rehypeJsxify from './rehypeJsxify';
 import rehypeStrip from './rehypeStrip';
+import rehypeEnhancedTag from './rehypeEnhancedTag';
 
 export interface IMdTransformerOptions {
   cwd: string;
@@ -29,6 +30,7 @@ export default async (raw: string, opts: IMdTransformerOptions) => {
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeStrip)
+    .use(rehypeEnhancedTag)
     .use(rehypeDemo, {
       techStacks: opts.techStacks,
       cwd: opts.cwd,
